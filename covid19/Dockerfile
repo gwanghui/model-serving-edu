@@ -11,7 +11,7 @@ ADD requirements.txt /
 ADD . /app
 WORKDIR /app
 
-RUN pip3 install
+RUN pip install
 
 EXPOSE 5000
 #CMD [ "python" , "app.py"]
