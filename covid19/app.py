@@ -276,8 +276,8 @@ def covid_classifier_model2(img_path, filename):
     requests.Session.trust_env = False
 
     #MODEL2_API_URL is tensorflow serving URL in another docker
-    HEADERS = {'content-type': 'application/json'}
-    MODEL2_API_URL = 'http://34.122.42.97:32380/v1/models/covid19/versions/1:predict'
+    HEADERS = {'content-type': 'application/json', 'Host' : 'http://covid19.myspace.example.com'}
+    MODEL2_API_URL = 'http://34.64.88.85:32380/v1/models/covid19:predict'
     CLASS_NAMES = ['Covid19', 'Normal_Lung', 'Pneumonia_Bacterial_Lung']
 
     logging.warning("****** Tenserflow Serving Request  *****")
