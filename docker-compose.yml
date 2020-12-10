@@ -1,7 +1,6 @@
 version: '2.3'
 
 services:
-
   flask:    # flask server for covid19 service web pages and APIs, with backend tensorflow servering
     build:
       context: ./covid19
