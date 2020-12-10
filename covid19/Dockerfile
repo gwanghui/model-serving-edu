@@ -15,5 +15,5 @@ RUN pip install --upgrade pip
 RUN pip install -r /requirements.txt
 
 EXPOSE 5000
-#CMD [ "python" , "app.py"]
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:5000", "--workers", "4", "--threads", "2"]
+CMD [ "python" , "app.py", "0.0.0.0:5000"]
+#CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:5000", "--workers", "4", "--threads", "2"]
