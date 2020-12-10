@@ -11,6 +11,8 @@ ADD requirements.txt /
 ADD . /app
 WORKDIR /app
 
+RUN pip3 install
+
 EXPOSE 5000
 #CMD [ "python" , "app.py"]
 CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:5000", "--workers", "4", "--threads", "2"]
