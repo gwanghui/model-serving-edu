@@ -14,5 +14,4 @@ opencv-python
 tensorflow
 imageio
 gunicorn==19.7.1
-cv2
 
