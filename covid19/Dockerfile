@@ -11,7 +11,8 @@ ADD requirements.txt /
 ADD . /app
 WORKDIR /app
 
-RUN pip install
+RUN pip install --upgrade pip
+RUN pip install -r /requirements.txt
 
 EXPOSE 5000
 #CMD [ "python" , "app.py"]
